@@ -26,7 +26,7 @@ console.log (capital);
 //compare string
 const school = 'Charfassion Govt College';
 console.log(school);
-console.log(school.toLocaleLowerCase());
+console.log(school.toLowerCase());
 console.log(school.toUpperCase());
 const book = 'Chemistry';
 const subject = 'chemistry';
