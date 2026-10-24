@@ -39,14 +39,15 @@ console.log(avg);
 
 function count_zero(str){
     let count=0;
-    for(let i of str){
+    const str2=str.split('');
+    for(let i of str2){
         if(i==0){
             count+=1;
         }
     }
     return count;
 }
-const binary=[0,0,1,0,1,1,1,0,1,0,0]
+const binary='01100101'
 console.log('Total Zero= ',count_zero(binary));
 
 // Task-5
