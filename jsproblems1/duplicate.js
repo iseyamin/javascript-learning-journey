@@ -6,7 +6,7 @@ function dup(arr){
     for(let i of arr){
         // if(arr2.includes(i)==false){
         //     arr2.push(i);
-        if(arr2.includes(i)){
+        if(arr2.map(x => x.toLowerCase()).includes(i.toLowerCase())){
             continue;
         }
         else arr2.push(i);
@@ -14,6 +14,6 @@ function dup(arr){
     return arr2;
 }
 
-const a=['sadia','ruma','tayeba','eusha','prima','eusha','prima','adhara'];
+const a=['sadia','ruma','tayeba','Eusha','prima','eusha','prima','adhara'];
 a2=dup(a);
 console.log(a2);
