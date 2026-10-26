@@ -19,3 +19,7 @@ function long(arr){
 const a=['sadia','ruma','tayeba','Eushaaa','prima','eusha','prima','adhara']
 const word = long(a);
 console.log(word);
+
+//random number between 10-20
+n = Math.round(Math.random()*(30-10)+10);
+console.log(n);
