@@ -2,8 +2,11 @@
 
 function mail(str){
     const last = str.slice(-4);
+    if(typeof str !== 'string'){
+        return 'Error input'
+    }
 
-    if(str[0] === '-' || str[0] === '@' || str[0] === '.' || str[0] === '_' || str[0] === '+'){
+    else if(str[0] === '-' || str[0] === '@' || str[0] === '.' || str[0] === '_' || str[0] === '+'){
         return false;
     }
     else if(str.includes(' ')){
@@ -17,5 +20,5 @@ function mail(str){
     
 }
 
-const email= 'fsjghjsghf@gfh.com';
+const email= ['fsjghjsghf@gfh.com'];
 console.log(mail(email));
