@@ -8,15 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Introduction to DOM</h1>
+        <section>
+            <h1>Introduction to DOM</h1>
         <p>Document Object Model</p>
         <ul>
             <li>Jalali</li>
             <li>Safayet</li>
             <li>Bonobash</li>
         </ul>
+        </section>
+        <section>
+            <h1 id="place">Tour places</h1>
+            <ul>
+                <li class="bon">Bandarban</li>
+                <li class="bon">Sundarban</li>
+                <li class="bon">Jhauban</li>
+            </ul>
+        </section>
 
-    </header>
+    </header> 
     <main>
 
     </main>
@@ -26,6 +36,11 @@
     for(let i of lis){
         console.log(i.innerText)
     }
+   //get elements by id
+   const head2= document.getElementById('place')
+   head2.innerText='Places changed by JS'
+   //get element by class
+   console.log(document.getElementsByClassName('bon'))
 </script>
 <script src="js/dom.js"></script>
 </body>
