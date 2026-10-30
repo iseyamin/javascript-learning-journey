@@ -8,9 +8,26 @@
 <body>
     <main>
         <h1>Hello DOM Eventssssssssss</h1>
+        <!-- Option 1 to control event -->
         <button onclick="console.log(86)">Click me</button>
         <button onclick="console.log('Fuck you')">Fuck u</button>
+        <br><br>
+        <!-- Option 2 to control event -->
+         <button onclick="makeOrange()">Make Orange</button>
+         <button onclick="makeGreen()">Make green</button>
+         <br><br>
+         <!-- Option 3 to control event -->
+        <button id="btn-blu">Make Blue</button>
+        <button id="btn-prp">Make purple</button>
     </main>
+<script>
+    const btnPrp=document.getElementById('btn-prp');
+    btnPrp.onclick=makePurple;
+
+    function makePurple(){
+        document.body.style.backgroundColor='purple'
+    }
+</script>
 <script src="js/event.js"></script>    
 </body>
 </html>
