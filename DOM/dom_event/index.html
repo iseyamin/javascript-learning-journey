@@ -19,6 +19,9 @@
          <!-- Option 3 to control event -->
         <button id="btn-blu">Make Blue</button>
         <button id="btn-prp">Make purple</button>
+        <br><br>
+        <!-- Option 4 addEventListener -->
+         <button id="btn-pink">Make Pink</button>
     </main>
 <script>
     const btnPrp=document.getElementById('btn-prp');
@@ -27,6 +30,12 @@
     function makePurple(){
         document.body.style.backgroundColor='purple'
     }
+    // addEventListener
+    document.getElementById('btn-pink').addEventListener('dblclick',
+        function(){
+            document.body.style.backgroundColor='pink'
+        }
+    )
 </script>
 <script src="js/event.js"></script>    
 </body>
