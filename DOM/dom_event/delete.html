@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+  </head>
+  <body>
+    <h1>Delete using DOM</h1>
+    <button id="btn-delete">Trigger</button>
+    <input id="user-name" placeholder="your name" type="text" />
+    <input id="user-email" placeholder="your mail" type="text" />
+    <br /><br /><br />
+    <h2 id="target-text">My Git ripo</h2>
+    <input placeholder="write delete" id="user-text" type="text" />
+    <button id="delete-btn" disabled>Delete</button>
+
+    <script>
+      //how to seen button
+      document
+        .getElementById("user-text")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value;
+          const btnText = document.getElementById("delete-btn");
+          if (text == "delete") {
+            btnText.removeAttribute("disabled");
+          } else btnText.setAttribute("disabled", true);
+        });
+      //button function
+      const btnText = document
+        .getElementById("delete-btn")
+        .addEventListener("click", function () {
+          const targetText = document.getElementById("target-text");
+          targetText.style.display = "none";
+        });
+    </script>
+    <script src="js/delete.js"></script>
+  </body>
+</html>
