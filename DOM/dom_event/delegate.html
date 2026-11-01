@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate</title>
+</head>
+<body>
+    <h1>About Delegate</h1>
+    <ol id="order-list">
+        <li class="list">my list item 1</li>
+        <li class="list">my list item 2</li>
+        <li class="list">my list item 3</li>
+        <li class="list">my list item 4</li>
+        <li class="list">my list item 5</li>
+    </ol>
+    <button id="add-btn">Add new Item</button>
+    
+    <script>
+    //      const items= document.getElementsByClassName('list');
+    //    for(const item of items){
+    //     item.addEventListener('click',
+    //         function(event){
+    //             event.target.parentNode.removeChild(event.target); //remove clicked node
+    //         }
+    //     )
+    //    }
+    
+    //add eventHandler to parent
+      document.getElementById('order-list').addEventListener('click',
+            function(event){
+                event.target.parentNode.removeChild(event.target); //remove clicked node
+            }
+        )
+       
+       //add button
+       document.getElementById('add-btn').addEventListener('click',
+        function(){
+            //where to be add
+            const ol=document.getElementById('order-list');
+            //new item
+            const li=document.createElement('li');
+            li.classList.add('list')
+            li.innerText='my new list item';
+            //add the item
+            ol.appendChild(li);
+        }
+       )
+
+    </script>
+</body>
+</html>
