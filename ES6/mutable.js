@@ -1,4 +1,4 @@
-//primitive variable is immutable
+//primitive(can copy) variable is immutable
 let nam='Eusha';
 const newname=nam;
 
@@ -6,7 +6,7 @@ const newname=nam;
  console.log(newname)  //eusha
 
 
- //non primitive variable is mutable
+ //non primitive(can not copy/ share memory address) variable is mutable
  let namary=['Eyamin','is'];
  let newnamary=namary;
 
