@@ -9,3 +9,16 @@ setTimeout(()=>{
 
 console.log('Ami Third');
 console.log(e+s);
+
+
+//set interval
+//it repeat
+let count=0;
+const clockId= setInterval(()=>{
+    count++;
+    console.log(count);
+
+    if(count>=5){
+        clearInterval(clockId);
+    }
+},1000)
