@@ -15,7 +15,7 @@ const b=5;
 console.log(a);
 console.log(a+b);
 
-//now use asynchronous way
+//now use synchronous way
 const handlePosts2=async() =>{
    try{
     const response= await fetch('https://jsonplaceholder.typicode.com/posts')
@@ -25,8 +25,12 @@ const handlePosts2=async() =>{
    catch{
     console.log('error dhorchi')
    }
+
+   console.log(b)
   
 }
 
 handlePosts2()
+
+
 
